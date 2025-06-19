@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "1dfb4b6d-c908-4117-b4c8-0986d933045b",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45960532",
+		"_collection_link": "https://dummy9-5576.postman.co/workspace/dummy-Workspace~a9333379-e4fd-48d7-9dee-a8577c39165e/collection/45960532-1dfb4b6d-c908-4117-b4c8-0986d933045b?action=share&source=collection_link&creator=45960532"
+	},
+	"item": [
+		{
+			"name": "aadhar_workspace",
+			"item": [
+				{
+					"name": "http://localhost:9000/search_adhars?location=Bengaluru&aadhar_number=464064958005&dob=1950-01-15&gender=Male",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/search_adhars?location=Bengaluru&aadhar_number=464064958005&dob=1950-01-15&gender=Male",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"search_adhars"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "Bengaluru"
+								},
+								{
+									"key": "aadhar_number",
+									"value": "464064958005"
+								},
+								{
+									"key": "dob",
+									"value": "1950-01-15"
+								},
+								{
+									"key": "gender",
+									"value": "Male"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/insert_aadhar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"Suman\",\r\n  \"last_name\": \"Hegde\",\r\n  \"dob\": \"1990-01-01\",\r\n  \"mobile_number\": \"9876543210\",\r\n  \"email_id\": \"suman@gmail.com\",\r\n  \"address\": \"Hubli\",\r\n  \"aadhar_number\": 123456789012,\r\n  \"city_id\": 1,\r\n  \"state_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/insert_aadhar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"insert_aadhar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/state_wise_adhar_count_above_60",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/state_wise_adhar_count_above_60",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"state_wise_adhar_count_above_60"
+							]
+						},
+						"description": "State wise Aadhar Count whose age above 60"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/state_city_wise_adhar_users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/state_city_wise_adhar_users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"state_city_wise_adhar_users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/top_states_aadhar_count",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/top_states_aadhar_count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"top_states_aadhar_count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/upload_profile_picture",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "aadhar_number",
+									"value": "464064958038",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "postman-cloud:///1f04cf97-81a6-49d0-b5d2-015570048c7a"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9000/upload_profile_picture",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"upload_profile_picture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9000/test_birthday_emails",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/test_birthday_emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"test_birthday_emails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
